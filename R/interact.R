@@ -25,6 +25,6 @@ interact_with_token = function(model, params, prompt, token){
     )
   }
   result <- content(response, as = "parsed")
-  if(length(result)>1) result <- $choices[[1]]$message$content
+  if(length(result)>1) result <- result$choices[[1]]$message$content
   return(result)
 }
